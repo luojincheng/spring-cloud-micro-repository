@@ -1,0 +1,22 @@
+server:
+  port: 
+spring:
+  profiles：
+  application:
+    name: 
+
+---
+server:
+  port: 
+spring:
+  profiles：dev
+  application:
+    name:  dev
+
+---
+server:
+  port: 
+spring:
+  profiles：test
+  application:
+    name:  test
