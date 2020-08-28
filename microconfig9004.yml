@@ -1,10 +1,9 @@
 spring:
-  profiles:
-    active: dev
+  profiles: 
 
 ---
 spring:
-  profiles: prod
+  profiles: test
   application:
     name: microconfig9004 
   cloud:
@@ -15,7 +14,7 @@ spring:
 
 ---
 spring:
-  profiles: default
+  profiles: prod
   application:
     name: microconfig9004
   datasource:
