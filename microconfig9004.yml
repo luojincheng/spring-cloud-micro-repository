@@ -1,0 +1,55 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: prod
+  application:
+    name: microconfig9004 
+  cloud:
+     config:
+       uri: http://localhost:3301
+       label: master
+       profile: prod
+
+---
+spring:
+  profiles: default
+  application:
+    name: microconfig9004 
+server:
+  port: 8001
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=gbk&serverTimezone=UTC
+    username: root
+    password: luomengxuanhaoren
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+eureka:
+  client:
+    service-url: #服务注册中心的配置内容，指定服务注册中心的位置
+      defaultZone: http://mycode.cn:7001/eureka/,http://mycode.cn:7002/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: myprvoider-01  #此微服务的进程名
+info:
+  app.name:  myprvoider-1
+  version: 1.2
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+---
+spring:
+  profiles: dev
+  application:
+    name: config-single-client
+  cloud:
+     config:
+       uri: http://localhost:3301
+       label: master
+       profile: dev
