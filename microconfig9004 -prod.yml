@@ -1,4 +1,4 @@
-spring:
+ spring:
   profiles: test
   application:
     name: microconfig9004 
