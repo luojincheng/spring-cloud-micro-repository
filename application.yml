@@ -1,22 +1,26 @@
-server:
-  port: 
 spring:
-  profiles：
-  application:
-    name: 
+  profiles:
+    active: dev
 
 ---
-server:
-  port: 
 spring:
-  profiles：dev
+  profiles: prod
   application:
-    name:  dev
+    name: config-single-client
+  cloud:
+     config:
+       uri: http://localhost:3301
+       label: master
+       profile: prod
+
 
 ---
-server:
-  port: 
 spring:
-  profiles：test
+  profiles: dev
   application:
-    name:  test
+    name: config-single-client
+  cloud:
+     config:
+       uri: http://localhost:3301
+       label: master
+       profile: dev
