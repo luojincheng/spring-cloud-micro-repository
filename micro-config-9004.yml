@@ -1,5 +1,5 @@
 server
-  port 8001
+  port 9004
 spring
   datasource
     url jdbcmysql127.0.0.13306testcharacterEncoding=gbk&serverTimezone=UTC
