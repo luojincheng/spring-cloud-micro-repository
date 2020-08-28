@@ -29,11 +29,11 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
 eureka:
   client:
-    service-url: #·şÎñ×¢²áÖĞĞÄµÄÅäÖÃÄÚÈİ£¬Ö¸¶¨·şÎñ×¢²áÖĞĞÄµÄÎ»ÖÃ
+    service-url: #æœåŠ¡æ³¨å†Œä¸­å¿ƒçš„é…ç½®å†…å®¹ï¼ŒæŒ‡å®šæœåŠ¡æ³¨å†Œä¸­å¿ƒçš„ä½ç½®
       defaultZone: http://mycode.cn:7001/eureka/,http://mycode.cn:7002/eureka/
   instance:
     prefer-ip-address: true
-    instance-id: myprvoider-01  #´ËÎ¢·şÎñµÄ½ø³ÌÃû
+    instance-id: myprvoider-01  #æ­¤å¾®æœåŠ¡çš„è¿›ç¨‹å
 info:
   app.name:  myprvoider-1
   version: 1.2
