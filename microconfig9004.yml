@@ -1,20 +1,14 @@
 spring:
   profiles: 
-
 ---
 spring:
   profiles: test
   application:
     name: microconfig9004 
-  cloud:
-     config:
-       uri: http://localhost:3301
-       label: master
-       profile: prod
-
 ---
 spring:
   profiles: prod
+    active: prod
   application:
     name: microconfig9004
   datasource:
