@@ -19,7 +19,7 @@ spring:
   application:
     name: microconfig9004
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=gbk&serverTimezone=UTC
+    url: 
     username: root
     password: luomengxuanhaoren
     driver-class-name: com.mysql.jdbc.Driver
