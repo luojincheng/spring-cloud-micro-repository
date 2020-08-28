@@ -19,8 +19,14 @@ spring:
   application:
     name: microconfig9004 
 server:
-  port: 9004 
-
+  port: 9004
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=gbk&serverTimezone=UTC
+    username: root
+    password: luomengxuanhaoren
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource 
 ---
 spring:
   profiles: dev
