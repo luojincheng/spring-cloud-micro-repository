@@ -1,12 +1,12 @@
 spring:
   profiles: test
   application:
-    name: micro-client-9004
+    name: microconfig9004 
 ---
 spring:
   profiles: prod 
   application:
-    name: micro-client-9004
+    name: microconfig9004
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=gbk&serverTimezone=UTC
     username: root
@@ -21,9 +21,9 @@ eureka:
       defaultZone: http://mycode.cn:7001/eureka/,http://mycode.cn:7002/eureka/
   instance:
     prefer-ip-address: true
-    instance-id: micro-client-9004 
+    instance-id: microconfig9004  
 info:
-  app.name:  micro-client-9004
+  app.name:  microconfig9004
   version: 1.2
 management:
   endpoints:
