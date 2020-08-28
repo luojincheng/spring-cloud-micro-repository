@@ -1,8 +1,12 @@
+server:
+  port: 9004 
 spring:
   profiles: test
   application:
     name: micro-client-9004
 ---
+server:
+  port: 9004 
 spring:
   profiles: prod 
   application:
@@ -12,9 +16,7 @@ spring:
     username: root
     password: luomengxuanhaoren
     driver-class-name: com.mysql.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource 
-server:
-  port: 9004 
+    type: com.alibaba.druid.pool.DruidDataSource  
 eureka:
   client:
     service-url:
