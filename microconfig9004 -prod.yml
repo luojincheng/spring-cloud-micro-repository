@@ -1,0 +1,36 @@
+spring:
+  profiles: 
+    active: prod
+---
+spring:
+  profiles: test
+  application:
+    name: microconfig9004 
+---
+spring:
+  profiles: prod 
+  application:
+    name: microconfig9004
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=gbk&serverTimezone=UTC
+    username: root
+    password: luomengxuanhaoren
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource 
+server:
+  port: 9004 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://mycode.cn:7001/eureka/,http://mycode.cn:7002/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: microconfig9004  
+info:
+  app.name:  microconfig9004
+  version: 1.2
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream   
