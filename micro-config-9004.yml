@@ -1,14 +1,14 @@
 server
   port 9004
 spring
+  profiles: default
   datasource
     url jdbcmysql127.0.0.13306testcharacterEncoding=gbk&serverTimezone=UTC
     username root
     password luomengxuanhaoren
     driver-class-name com.mysql.jdbc.Driver
     type com.alibaba.druid.pool.DruidDataSource
-  application
-    profiles: default
+  application 
     name Myprvoider-1   #这个名字是微服务名称 ，consumer调用者名称，从而可以达到一个访问consumer能调用多个provider的功能
 eureka
   client
