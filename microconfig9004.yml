@@ -17,16 +17,16 @@ spring:
 spring:
   profiles: default
   application:
-    name: microconfig9004 
-server:
-  port: 9004
-spring:
+    name: microconfig9004
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=gbk&serverTimezone=UTC
     username: root
     password: luomengxuanhaoren
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource 
+server:
+  port: 9004 
+  
 ---
 spring:
   profiles: dev
