@@ -1,0 +1,27 @@
+server
+  port 8001
+spring
+  datasource
+    url jdbcmysql127.0.0.13306testcharacterEncoding=gbk&serverTimezone=UTC
+    username root
+    password luomengxuanhaoren
+    driver-class-name com.mysql.jdbc.Driver
+    type com.alibaba.druid.pool.DruidDataSource
+  application
+    profiles: default
+    name Myprvoider-1   #这个名字是微服务名称 ，consumer调用者名称，从而可以达到一个访问consumer能调用多个provider的功能
+eureka
+  client
+    service-url #服务注册中心的配置内容，指定服务注册中心的位置
+      defaultZone httpmycode.cn7001eureka,httpmycode.cn7002eureka
+  instance
+    prefer-ip-address true
+    instance-id myprvoider-01  #此微服务的进程名
+info
+  app.name  myprvoider-1
+  version 1.2
+management
+  endpoints
+    web
+      exposure
+        include hystrix.stream
